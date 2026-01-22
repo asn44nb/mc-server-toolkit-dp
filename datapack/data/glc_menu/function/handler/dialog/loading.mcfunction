@@ -9,3 +9,6 @@ tag @s add glc.show_pending
 
 # Tag ekle
 tag @s add closed.glc
+
+# Aç
+$execute as @p[tag=gulce_admin,limit=1,sort=arbitrary] at @s positioned ~ ~ ~ rotated as @s run schedule function glc_menu:handler/dialog/open $(tick)t
