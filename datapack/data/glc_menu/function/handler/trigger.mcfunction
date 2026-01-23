@@ -11,6 +11,9 @@ execute if score @s gulce_menu matches 2 run function glc_menu:handler/builder/p
 # Menü 3: Düzenleme Menüsü
 execute if score @s gulce_menu matches 3 run function glc_menu:handler/builder/edit
 
+# Kapat
+execute if score @s gulce_menu matches 4 run function glc_menu:handler/close
+
 # Trigger sıfırla
 scoreboard players set @a gulce_menu 0
 
