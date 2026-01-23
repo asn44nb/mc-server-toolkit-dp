@@ -19,8 +19,7 @@ Katkılar memnuniyetle karşılanır; ancak belirli kurallar vardır. Amaç kali
 ## Dosya Yapısı
 
 - Yeni sistemler rastgele klasör açılarak eklenmez.  
-- Mevcut yapı takip edilmelidir:  
-  - `datapack.zip` → bağımsız veya modüler datapack bileşenleri (ZIP)  
+- Mevcut yapı takip edilmelidir:
   - `datapack` → bağımsız veya modüler datapack bileşenleri  
 - Ortak kullanılan fonksiyonlar mümkünse merkezi bir alanda tutulur.
 
