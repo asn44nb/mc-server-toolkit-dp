@@ -3,8 +3,8 @@
 # ═══════════════════════════════════════════════════
 
 # Loading göster
-scoreboard players set @s gulce_load.dialog 4
-function glc_menu:handler/dialog/loading {tick:30}
+scoreboard players set @s gulce_load.dialog 20
+function glc_menu:handler/dialog/loading
 
 # Ana menü JSON'ı hazırla
 data modify storage mc:dialog ui set value {type:"minecraft:multi_action",title:{"text":"🎮 GULCE İzin Yönetimi","color":"gold","bold":true},body:{type:"minecraft:plain_message",contents:"§l§a✨ İzinleri buradan yönetebilirsiniz\n\n§7• İzin Listesi (Yürüt/Düzenle/Sil)\n§7• Yeni İzin Ekle"},can_close_with_escape:true,pause:false,actions:[]}
@@ -19,3 +19,4 @@ data modify storage mc:dialog ui.actions append value {label:"◀️ Ana Panel",
 data modify storage mc:dialog ui.actions append value {label:"⚠ Toplu Eylemler",action:{type:"minecraft:run_command",command:"/trigger gulce_menu set 3"}}
 
 data modify storage mc:dialog ui.actions append value {label:"⏺ Düzenle",action:{type:"minecraft:show_dialog",dialog:{type:"minecraft:multi_action",title:"",inputs:[{type:"minecraft:text",key:"id",label:"ID",label_visible:1b,max_length:2000000000}],can_close_with_escape:1b,pause:0b,after_action:"close",columns:1,actions:[{label:"İleri",action:{type:"minecraft:dynamic/run_command",template:"/function glc_menu:handler/builder/edit_single {id:\"$(id)\"}"}}]}}}
+
