@@ -15,4 +15,4 @@ tag @s remove glc.show_pending
 tag @s remove closed.glc
 
 # Log
-execute as @p[tag=gulce_debug,limit=1,sort=arbitrary] at @s positioned ~ ~ ~ rotated as @s run tellraw @s ["",{"text":"[GLC] ","color":"light_purple","bold":true},{"text":"Dialog gösterildi","color":"green"}]
+# execute as @p[tag=gulce_debug,limit=1,sort=arbitrary] at @s positioned ~ ~ ~ rotated as @s run tellraw @s ["",{"text":"[GLC] ","color":"light_purple","bold":true},{"text":"Dialog gösterildi","color":"green"}]
