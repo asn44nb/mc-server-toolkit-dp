@@ -2,8 +2,10 @@
 # Düzenleme Menüsü Builder
 # ═══════════════════════════════════════════════════
 
-# Loading Göster
-function glc_menu:handler/dialog/loading {tick:21}
+# Loading göster
+tag @s add glc.show_pending
+function glc_menu:handler/dialog/loading
+scoreboard players set @s gulce_load.dialog 30
 
 # Menü hazırla
 data modify storage mc:dialog ui set value {type:"minecraft:multi_action",title:{"text":"✏️ Toplu Düzenleme","color":"yellow","bold":true},body:{type:"minecraft:plain_message",contents:"§l§eToplu İşlemler\n\n§7• Tüm İzinleri Sil\n§7• İzin Seviyelerini Sıfırla\n§7• Belirli Oyuncunun İzinlerini Sil"},can_close_with_escape:true,pause:false,actions:[]}
@@ -18,3 +20,4 @@ data modify storage mc:dialog ui.actions append value {label:"👤 Oyuncuya Gör
 data modify storage mc:dialog ui.actions append value {label:"📊 İstatistikler",action:{type:"minecraft:run_command",command:"/function glc_menu:handler/utils/stats"}}
 
 data modify storage mc:dialog ui.actions append value {label:"◀️ Geri",action:{type:"minecraft:run_command",command:"/trigger gulce_menu set 1"}}
+
