@@ -7,8 +7,12 @@ dialog show @s {type:"minecraft:notice",title:"",body:{type:"minecraft:plain_mes
 # Gösterim bekleyen tag
 tag @s add glc.show_pending
 
+# Tag Sil
+tag @e[type=minecraft:interaction,tag=_glcMenu] remove _glcMenu
+
 # Tag ekle
 tag @s add closed.glc
+tag @e[type=minecraft:interaction,tag=!_glcMenu] add _glcMenu
 
 # Yetki Kontrol
 schedule function glc_menu:handler/dialog/not_permission 26t
