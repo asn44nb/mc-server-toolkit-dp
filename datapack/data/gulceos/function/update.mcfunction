@@ -4,4 +4,4 @@ execute unless entity @s[tag=op] run return 0
 
 tellraw @a {"text":"GulceOS güncelleniyor...","color":"gold","bold":true}
 
-function gulceos:updater/activate
+function gulceos:updater/activate {"version":"v30"}
