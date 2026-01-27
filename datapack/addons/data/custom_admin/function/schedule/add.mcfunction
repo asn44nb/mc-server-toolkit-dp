@@ -6,7 +6,7 @@
 scoreboard players add #schedule_id gulce_id 1
 
 # Storage'a ekle
-$data modify storage mc:handler data.scheduled append value {schedule_id:0,action_id:"$(action_id)",delay:$(delay),remaining:$(delay),player:"$(player)",repeat:$(repeat)b}
+$data modify storage mc:handler data.scheduled append value {schedule_id:0,action_id:"$(action_id)",delay:$(delay),remaining:$(delay),player:"$(player)"}
 
 # ID'yi güncelle (son eklenen)
 execute store result storage mc:handler data.scheduled[-1].schedule_id int 1 run scoreboard players get #schedule_id gulce_id
@@ -19,4 +19,5 @@ $execute if score $(repeat) gulce_id matches 1 run tellraw @s ["",{"text":"  �
 
 # Log
 execute store result score #temp gulce_id run scoreboard players get #schedule_id gulce_id
+
 tellraw @a[tag=gulce_admin] ["",{"text":"[GULCE] ","color":"gold","bold":true},{"text":"📅 Zamanlandı #","color":"gray"},{"score":{"name":"#temp","objective":"gulce_id"},"color":"yellow"}]
