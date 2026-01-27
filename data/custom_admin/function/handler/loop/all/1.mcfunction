@@ -20,4 +20,4 @@ function custom_admin:group/check
 # ─────────────────────────────
 # SELF-RESCHEDULE (ÖNEMLİ!)
 # ─────────────────────────────
-schedule function custom_admin:handler/loop/all/1 2t replace
+execute if data storage mc:config {Config:{Enabled:1b}} if score #admin_loop global matches 1 run schedule function custom_admin:handler/loop/all/1 2t replace
