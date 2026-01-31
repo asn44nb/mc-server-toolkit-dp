@@ -13,7 +13,7 @@ loot insert 0 300 0 loot glc_menu:fph
 data remove storage glc_menu:names temp
 data modify storage glc_menu:names temp.NAME set from block 0 300 0 Items[0].components."minecraft:profile".name
 
-# UUID'yi de kaydet (opsiyonel, debug için)
+# UUID'yi de kaydet
 data modify storage glc_menu:names temp.UUID set from entity @s UUID
 
 # Temizlik
