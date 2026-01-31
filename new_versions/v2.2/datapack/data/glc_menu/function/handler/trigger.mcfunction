@@ -21,5 +21,4 @@ scoreboard players set @a gulce_menu 0
 scoreboard players enable @s gulce_menu
 
 # Konsol mesajı
-tellraw @s ["",{"text":"[GULCE-MENU] ","color":"gold","bold":true},{"text":"Menü açıldı!","color":"green"}]
-tellraw @s ["",{"text":"Tekrar açmak için: ","color":"yellow"},{"text":"/trigger gulce_menu","color":"aqua","underlined":true,"click_event":{"action":"run_command","command":"/trigger gulce_menu"}}]
+function glc_menu:handler/menu_notify with storage glc_menu:names temp
