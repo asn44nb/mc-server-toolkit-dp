@@ -2,9 +2,6 @@
 # Dialog Show - Gerçek Gösterici
 # ═══════════════════════════════════════════════════
 
-# Dialog'u temp'e kopyala
-data modify storage glc_menu:names temp.ui set from storage mc:dialog ui
-
 # Player head tabanlı isim seçici çalıştır
 execute as @p[tag=gulce_admin,tag=!closed.glc,limit=1,sort=arbitrary] at @s positioned ~ ~ ~ rotated as @s run function glc_menu:handler/utils/player_name
 
