@@ -155,7 +155,7 @@ execute as @a[scores={ap_freezeAll=1..},tag=Admin] run function custom:freeze_on
 execute as @a[scores={ap_freezeAll=1..},tag=Admin] run tellraw @a {"text":"[Admin] Herkes donduruldu!","color":"aqua","bold":true}
 scoreboard players set @a[scores={ap_freezeAll=1..}] ap_freezeAll 0
 
-execute as @a[scores={ap_unfreezeAll=1..},tag=Admin] run function custom:unfreeze_all
+execute as @a[scores={ap_unfreezeAll=1..},tag=Admin] run function custom:freeze_off {player:"@a"}
 execute as @a[scores={ap_unfreezeAll=1..},tag=Admin] run tellraw @a {"text":"[Admin] Donma çözüldü!","color":"green"}
 scoreboard players set @a[scores={ap_unfreezeAll=1..}] ap_unfreezeAll 0
 
