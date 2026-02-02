@@ -1,0 +1,80 @@
+name: Empty / General Issue
+description: Serbest açıklama – bug, fikir, soru, teknik detay
+title: "[Diğer] "
+labels:
+  - other
+assignees:
+  - rttbb556gv6gv667gv
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧰 Datapack Genel Issue
+        Bu alan **bilerek serbest** bırakıldı.  
+        Ama aşağıdaki bilgiler işleri **ışık hızında** çözmemizi sağlar 🚀
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Konu Türü
+      options:
+        - Bug / Hata
+        - Fikir / Öneri
+        - Soru
+        - Performans
+        - UI / Menü
+        - Command / Function
+        - Diğer
+    validations:
+      required: true
+
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft Sürümü
+      placeholder: "Örn: 1.20.4"
+    validations:
+      required: false
+
+  - type: input
+    id: datapack_version
+    attributes:
+      label: Datapack Sürümü
+      placeholder: "Örn: v2.0.1"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Ortam
+      options:
+        - Singleplayer
+        - Multiplayer (Vanilla)
+        - Multiplayer (Paper / Fork)
+        - Test World
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Açıklama
+      description: Ne oldu, ne olmasını bekliyordun, varsa hata çıktısı
+      placeholder: |
+        Örnek:
+        - Menü açılmıyor
+        - /trigger çalışıyor ama GUI gelmiyor
+        - Log'da hata yok
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Ek Bilgi (İsteğe bağlı)
+      description: Log, video, ekran görüntüsü, stacktrace vs.
+      placeholder: Paste & go.
+    validations:
+      required: false
