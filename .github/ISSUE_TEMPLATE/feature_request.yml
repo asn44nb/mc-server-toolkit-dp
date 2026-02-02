@@ -1,0 +1,81 @@
+name: Feature Request
+description: Yeni özellik veya geliştirme önerisi
+title: "[Feature] "
+labels:
+  - enhancement
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Özellik Talebi
+        Yeni bir fikir mi var? Harika.  
+        Ne kadar net anlatırsan, o kadar hızlı hayata geçer 🚀
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Özellik Özeti
+      description: Ne istiyorsun?
+      placeholder: Kısaca anlat…
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Tanımı
+      description: Şu an ne eksik veya zor?
+      placeholder: Mevcut durumda yaşanan sorun…
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Önerilen Çözüm
+      description: Bunu nasıl hayal ediyorsun?
+      placeholder: Davranış, komut, UI, akış…
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatifler
+      description: Başka yapılma şekilleri?
+      placeholder: Alternatif fikirler, artı/eksi…
+    validations:
+      required: false
+
+  - type: dropdown
+    id: performance
+    attributes:
+      label: Performans Etkisi
+      options:
+        - Yok
+        - Düşük
+        - Orta
+        - Yüksek
+    validations:
+      required: true
+
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Geriye Dönük Uyum
+      options:
+        - Uyumlu
+        - Kırıcı
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Ek Bilgi
+      description: Mockup, pseudo-code, örnek kullanım
+      placeholder: Kod, ekran görüntüsü, link…
+    validations:
+      required: false
