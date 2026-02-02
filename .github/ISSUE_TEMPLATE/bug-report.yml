@@ -1,0 +1,137 @@
+name: Bug Report
+description: Datapack çalışmıyor veya hata veriyor
+title: "[Hata] "
+labels:
+  - bug
+assignees:
+  - rttbb556gv6gv667gv
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐞 Bug Report
+        Bu form **bilinçli olarak detay ister**.  
+        Log yoksa → issue yok. Basit matematik.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📌 Kısa Özet
+      description: 1–2 cümleyle sorun ne?
+      placeholder: Menü açılmıyor, /reload sonrası hata veriyor…
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎮 Minecraft Bilgileri
+
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft Sürümü
+      placeholder: "Örn: 1.20.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Loader
+      options:
+        - Vanilla
+        - Fabric
+        - Forge
+        - Paper / Purpur / Spigot
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Oyun Ortamı
+      options:
+        - Singleplayer
+        - Sunucu
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📦 Datapack Bilgileri
+
+  - type: input
+    id: datapack_name
+    attributes:
+      label: Datapack Adı
+      placeholder: "Örn: MC-ServerToolkit++"
+    validations:
+      required: true
+
+  - type: input
+    id: datapack_version
+    attributes:
+      label: Datapack Versiyonu / Commit
+      placeholder: "Örn: v2.0.1 veya commit hash"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: other_packs
+    attributes:
+      label: Başka datapack’ler var mı?
+      options:
+        - Hayır
+        - Evet (açıklamada listele)
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 🔁 Tekrar Etme Adımları
+      description: Bu adımlar takip edilince hata %100 oluşmalı
+      placeholder: |
+        1. Sunucuyu başlat
+        2. /reload yaz
+        3. Menü komutunu çalıştır
+    validations:
+      required: true
+
+  - type: textarea
+    id: reload_log
+    attributes:
+      label: 📤 /reload Log (ZORUNLU)
+      description: Log yoksa issue kapatılır
+      placeholder: Log’u buraya yapıştır
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Beklenen Davranış
+      placeholder: Menü açılmalıydı, hata olmamalıydı…
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Gerçekleşen Davranış
+      placeholder: Hiçbir şey olmadı / hata çıktı…
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 🧠 Ek Notlar
+      description: Özel ayar, screenshot, video (opsiyonel)
+      placeholder: Link, görsel, ekstra açıklama…
+    validations:
+      required: false
